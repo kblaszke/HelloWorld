@@ -1,1 +1,8 @@
 language: java
+jdk:
+  - openjdk8
+notification:
+  email:
+  - krzysztof.blaszke@gmail.com
+script:
+  - mvn clean install
