@@ -7,7 +7,7 @@ notification:
 script:
   - mvn clean install
 deploy:
-  provider: pages
+  provider: releases
   skip-cleanup: true
   target-branch: master # Commit to master instead of gh-pages
   github-token: $GH_TOKEN
