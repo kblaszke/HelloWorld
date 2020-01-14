@@ -9,7 +9,7 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  target_branch: master # Commit to master instead of gh-pages
+  target_branch: versions # Commit to master instead of gh-pages
   api_key: $GH_TOKEN
   keep-history: true # By default, Travis uses push --force and wipes out commit history
   verbose: true
