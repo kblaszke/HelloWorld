@@ -5,13 +5,10 @@ notification:
   email:
   - krzysztof.blaszke@gmail.com
 script:
-  - mvn clean install
-deploy:
-  provider: releases
-  skip_cleanup: true
-  #target_branch: master # Commit to master instead of gh-pages
-  api_key: $GH_TOKEN
-  keep-history: true # By default, Travis uses push --force and wipes out commit history
-  verbose: true
-  on:
-    tags: true
+  - if [ "$(TRAVIS_PULL_REQUEST)" != "false" ] 
+  then
+    mvn test
+  else
+    mvn clean install
+  fi
+  
