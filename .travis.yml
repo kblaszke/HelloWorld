@@ -5,6 +5,6 @@ notification:
   email:
   - krzysztof.blaszke@gmail.com
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then mvn test fi'
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then mvn clean install fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then mvn test; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then mvn clean install; fi'
   
